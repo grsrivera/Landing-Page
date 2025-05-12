@@ -51,5 +51,39 @@ document.getElementById('back-btn').addEventListener('click', () => {
     showCard(currentIndex);
 });
 
+
+// Email Section
+
+document.getElementById("notify-button").addEventListener("click", async function (e) {
+    e.preventDefault();  
+    const emailInput = document.getElementById("email-input");
+    const email = emailInput.value;
+
+    if (!email) {
+        alert("Please enter your email.");
+        return;
+    }
+
+    const response = await fetch("http://127.0.0.1:5000/submit_email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+        const message = document.createElement("p");
+        message.style.fontSize = "1.2rem";
+        message.style.textAlign = "center";
+        message.textContent = "Thanks! You’ll be the first to know when Rendevu launches.";
+        document.querySelector(".notify-form").replaceWith(message);
+    } else {
+        alert(result.error || "Something went wrong.");
+    }
+});
+
+
+
 // Show the first card on load
 showCard(currentIndex);

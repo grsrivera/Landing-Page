@@ -419,7 +419,7 @@ to {
     left: 50%;
     width: 120%; 
     height: 120%;
-    background-image: url("email_background.png");
+    background-image: url("media/email_background.png");
     background-size: cover;
     background-position: center;
     transform: translate(-50%, -50%);
