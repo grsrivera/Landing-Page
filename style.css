@@ -1,0 +1,483 @@
+body {
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 9rem;
+    min-width: 1200px;
+  }
+  
+/* Header Section */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 5rem;
+}
+
+#top-left {
+    font-size: 2.5rem;
+}
+
+#top-right {
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+
+.hero-section {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-subsection {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Video Section */
+
+.video-section {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    justify-content: center;
+}
+
+.video-section video {
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: contain;
+}
+
+/* How it works Section */
+
+.how-section {
+    height: 20rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.how-it-works {
+    background-color: #aef87e;
+    width: 28%;
+    padding: 3rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.how-title {
+    width: 100%;
+    text-align: left;
+}
+
+.how-text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52%;
+    background-color: #191919;
+    color: white;
+    padding: 3.5rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+/* Scroll Section */
+
+.scroll-section {
+    height: 120vh;
+}
+
+.card-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    position: relative;
+}
+
+.card:nth-child(1) { z-index: 3; }
+.card:nth-child(2) { z-index: 2; }
+.card:nth-child(3) { z-index: 1; } 
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* For Whom Section */
+
+.for-whom-section {
+    background-color: #191919;
+    color: white;
+    height: 4rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
+
+.for-the-ones-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto);  
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+  
+.icon-card {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    align-items: center;
+    border: 1px solid #191919;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    
+    background-color: white;
+    transition: box-shadow 0.2s ease;
+}
+  
+.icon-card:hover {
+    background-color: #fffa97;
+}
+  
+.icon-card img {
+    height: 50%;
+    margin-bottom: 1rem;
+}
+
+.icon-card p {
+    font-size: 1.5rem;
+}
+  
+
+/* Features Section */
+
+.features-section {
+    display: flex;
+    height: 90vh;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.features-section .left-column {
+    flex: 0.45;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.core-features-box {
+    background-color: #191919;
+    color: white;
+    border-radius: 1rem;
+    font-size: 3rem;
+    padding: 3rem;
+    height: 20%;
+    margin-bottom: 1.5rem;
+}
+
+.features-text-box {
+    height: 100%;   
+    position: relative; 
+}
+
+.feature-text-card {
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #aef87e;
+    border-radius: 1rem;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 0;
+}
+
+.feature-text-card.visible {
+    z-index: 1;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.feature-text-card h2 {
+    text-align: left;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.feature-text-card p {
+    font-size: 1.5rem;
+}
+
+
+.features-section .right-column {
+    flex: 0.55;
+    height: 100%;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.feature-pics-card {
+    width: 100%;
+    height: 100%;
+    background-color: #f1f2f6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+}
+
+.feature-pics-card img {
+    position: absolute;
+}
+
+/* Live Venue Pics */
+#map-pic {
+    top: 4rem;
+    left: 5rem;
+}
+
+#options-pic {
+    top: 11rem;
+    left: 18rem;
+}
+
+/* Filters Pics */
+#atmosphere-pic {
+    top: 24rem;
+    left: 10rem;
+}
+
+#crowd-pic {
+    top: 15rem;
+    left: 15rem;
+    z-index: 1;
+}
+
+#times-pic {
+    top: 3rem;
+    left: 5rem;
+}
+
+/* Vu Score Pics */
+#score-pic {
+    top: 3rem;
+    left: 7rem;
+}
+
+#place-pic {
+    top: 18rem;
+    left: 12rem;
+    z-index: 1;
+}
+
+#sort-pic {
+    top: 25rem;
+    left: 7rem;
+    z-index: 0;
+    opacity: 1;
+}
+
+/* Check In Pics */
+#start-pic {
+    top: 4rem;
+    left: 3rem;
+}
+
+#survey-pic {
+    height: 80vh;
+    top: 3rem;
+    left: 21rem;
+}
+
+/* Wingmate Pics */
+#challenge-pic {
+    top: 10rem;
+    left: 10rem;
+    z-index: 1;
+}
+
+#chatbot-pic {
+    top: 4rem;
+    left: 20rem;
+}
+
+#tip-pic {
+    top: 2rem;
+    left: 2rem;
+}
+
+/* Tips Pic */
+#tips-pic {
+    left: 11rem;
+    height: 90vh
+}
+.feature-pics-card:nth-child(1) { z-index: 0; }
+.feature-pics-card:nth-child(2) { z-index: 0; }
+.feature-pics-card:nth-child(3) { z-index: 0; } 
+.feature-pics-card:nth-child(4) { z-index: 0; }
+.feature-pics-card:nth-child(5) { z-index: 0; }
+.feature-pics-card:nth-child(6) { z-index: 0; } 
+
+
+.nav-buttons {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none; /* so the container doesn't block interactions */
+}
+
+.nav-button {
+    font-size: 4rem;
+    font-weight: normal;
+    pointer-events: auto; /* re-enable clickability on buttons */
+    background: none;
+    cursor: pointer;
+    font-weight: normal;
+    border: none;
+}
+
+/* Scrolling bar */
+
+.scrolling-bar {
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background: white;
+    margin-bottom: 3rem;
+  }
+
+.scrolling-text {
+    display: inline-block;
+    padding-left: 100%; 
+    animation: scroll-left 80s linear infinite;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@keyframes scroll-left {
+from {
+    transform: translateX(0%);
+}
+to {
+    transform: translateX(-100%);
+}
+}
+
+/* Email Section */
+.gradient-background {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+  
+
+.gradient-background::before {  /* Creates element that can be rotated without rotating entire box*/
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%; 
+    height: 120%;
+    background-image: url("email_background.png");
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    animation: rotateBackground 20s infinite alternate ease-in-out;
+    z-index: -1;
+}
+  
+@keyframes rotateBackground {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) scale(2.0);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(60deg) scale(2.0);
+    }
+}
+  
+
+.content-wrapper {
+    position: relative; 
+    text-align: center;
+    z-index: 1; 
+}
+  
+.gradient-background h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+  
+.gradient-background p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+  
+.notify-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+  
+.notify-form input {
+    padding: 1.5rem 2rem;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid black;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
+  
+.notify-form button {
+    padding: 1rem 2rem;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+  
+
+  
